@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite"> <!-- to run the tests paralle, if you change methods then methods will run parallel-->
+  
+  <groups>
+  <run>
+  <include name="submitOrder"></include>
+  </run>
+  </groups>
+  
+  <test thread-count="5" name="Submit Order">  <!-- upto 5 tests/methods can run parallel-->
+    <classes>
+    
+      <class name="Test.StandAloneTest"/>
+      
+    </classes>
+  </test> <!-- Test -->
+  
+  
+   <test thread-count="5" name="Error validation">
+    <classes>
+    
+      <class name="Test.Errorvalidation"/>
+      
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  
+</suite> <!-- Suite -->
